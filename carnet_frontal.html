@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carnet Docente 3D - Frontal</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--brand-color: rgb(255, 130, 0);
+			--brand-dark: rgb(220, 110, 0);
+		}
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #f0f2f5;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+			perspective: 2000px;
+		}
+		.card-container {
+			width: 880px;
+			height: 540px;
+			position: relative;
+			border-radius: 24px;
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+			overflow: hidden;
+			background: white;
+			border: 1px solid rgba(255, 130, 0, 0.15);
+			display: flex;
+		}
+		.front-left {
+			width: 35%;
+			background: linear-gradient(135deg, var(--brand-color) 0%, var(--brand-dark) 100%);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			position: relative;
+		}
+		.front-right {
+			width: 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 60px;
+		}
+		.photo-circle {
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+			border: 6px solid rgba(255, 255, 255, 0.4);
+			background: rgba(255, 255, 255, 0.1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			backdrop-filter: blur(5px);
+		}
+	</style>
+</head>
+<body>
+	<div class="card-container">
+		<div class="front-left">
+			<div class="photo-circle">
+				<svg class="w-20 h-20 text-white/40" fill="currentColor" viewBox="0 0 20 20">
+					<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+				</svg>
+			</div>
+			<div class="mt-6 text-center">
+				<p class="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em]">Puntaje Docente</p>
+				<p class="text-4xl font-black">2026</p>
+			</div>
+		</div>
+		<div class="front-right">
+			<div class="flex justify-between items-start mb-8">
+				<div>
+					<h1 class="text-gray-400 text-[10px] font-black uppercase tracking-[0.3em] mb-1">Personal Docente</h1>
+					<h2 class="text-4xl font-black text-gray-900 leading-none">DURÁN<br><span class="text-gray-700">JAVIER FERNANDO</span></h2>
+				</div>
+				<div class="bg-orange-500 text-white px-3 py-1 rounded-md font-bold text-[10px] uppercase shadow-lg shadow-orange-100">VIGENTE</div>
+			</div>
+			<div class="space-y-6">
+				<div class="flex items-center space-x-12">
+					<div>
+						<span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-1">DNI</span>
+						<span class="text-xl font-extrabold text-gray-800">29.971.861</span>
+					</div>
+					<div>
+						<span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest block mb-1">Localidad</span>
+						<span class="text-xl font-extrabold text-gray-800">Jáchal</span>
+					</div>
+				</div>
+				<div class="pt-6 border-t border-gray-100 flex items-center justify-between">
+					<div class="flex items-center text-gray-400">
+						<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+						</svg>
+						<span class="text-[10px] font-bold uppercase tracking-widest">San Juan, AR</span>
+					</div>
+					<span class="text-[9px] font-mono text-gray-300 tracking-tighter">OBLEA_REF: 2026-RAMA-MEDIA</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

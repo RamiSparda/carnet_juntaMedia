@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carnet Docente 3D - Trasera</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--brand-color: rgb(255, 130, 0);
+			--brand-dark: rgb(220, 110, 0);
+		}
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #f0f2f5;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+			perspective: 2000px;
+		}
+		  .card-container {
+			  width: 880px;
+			  height: 540px;
+			  position: relative;
+			  border-radius: 24px;
+			  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+			  overflow: hidden;
+			  background: white;
+			  border: 1px solid rgba(255, 130, 0, 0.15);
+			  display: flex;
+			  flex-direction: column;
+		  }
+
+		  .card-container {
+			  padding: 25px 35px;
+		  }
+
+	/* --- MEDIA QUERIES PARA RESPONSIVE --- */
+	@media (max-width: 950px), (max-height: 600px) {
+		.card-container {
+			width: 98vw;
+			height: 60vw;
+			max-width: 98vw;
+			max-height: 98vh;
+			min-width: 320px;
+			min-height: 180px;
+		}
+	}
+	   @media (max-width: 700px), (max-height: 400px) {
+		   .card-container {
+			   width: 100vw;
+			   height: 100vw;
+			   max-width: 100vw;
+			   max-height: 100vh;
+			   min-width: 220px;
+			   min-height: 120px;
+			   border-radius: 12px;
+		   }
+	   }
+	   @media (max-width: 600px), (max-height: 350px) {
+		   .card-container {
+			   width: 100vw;
+			   height: 70vw;
+			   max-width: 100vw;
+			   max-height: 100vh;
+			   min-width: 180px;
+			   min-height: 100px;
+			   border-radius: 8px;
+		   }
+		   .back-grid {
+			   display: grid;
+			   grid-template-columns: 1fr;
+			   gap: 10px;
+		   }
+	   }
+	   @media (max-width: 500px), (max-height: 300px) {
+		   .card-container {
+			   width: 100vw;
+			   height: 90vw;
+			   min-width: 120px;
+			   min-height: 80px;
+			   border-radius: 4px;
+		   }
+		   .back-grid {
+			   grid-template-columns: 1fr;
+			   gap: 5px;
+		   }
+	   }
+		.back-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+			flex-grow: 1;
+		}
+		.section-header {
+			background-color: #fff7ed;
+			color: var(--brand-dark);
+			padding: 6px 10px;
+			font-size: 10px;
+			font-weight: 800;
+			border-radius: 6px;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			border-left: 4px solid var(--brand-color);
+		}
+		.oblea-table {
+			width: 100%;
+			font-size: 10px;
+			margin-bottom: 12px;
+		}
+		.oblea-table th {
+			text-align: left;
+			color: #94a3b8;
+			font-size: 8px;
+			text-transform: uppercase;
+			padding-bottom: 4px;
+			border-bottom: 1px solid #f1f5f9;
+		}
+		.oblea-table td {
+			padding: 5px 0;
+			border-bottom: 0.5px solid #f8fafc;
+			color: #1e293b;
+			font-weight: 500;
+		}
+		.oblea-table .puntaje {
+			font-weight: 700;
+			color: #0f172a;
+			text-align: right;
+		}
+		.oblea-table .tipo {
+			color: #64748b;
+			text-align: center;
+			width: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="card-container">
+		<div class="flex justify-between items-center border-b-2 border-gray-50 pb-1 mb-2">
+			<div class="flex items-center">
+				<div class="w-1.5 h-6 bg-orange-500 rounded-full mr-3"></div>
+				<h3 class="text-lg font-black text-slate-800 uppercase tracking-tight">Registro de Oblea 2026</h3>
+			</div>
+			<div class="text-[8px] font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded">JUNTA DE CLASIFICACIÓN DOCENTE RAMA MEDIA</div>
+		</div>
+		<div class="back-grid">
+			<!-- COLUMNA 1: CICLO BÁSICO Y FPP -->
+			<div class="flex flex-col">
+				<div class="section-header">Ciclo Básico Secundaria (1°,2°,3°)</div>
+				<table class="oblea-table">
+					<thead>
+						<tr>
+							<th>Espacio Curricular</th>
+							<th class="tipo">T.</th>
+							<th class="puntaje">Pts.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>FÍSICA</td><td class="tipo">S</td><td class="puntaje">16,45</td></tr>
+						<tr><td>MATEMÁTICA</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>TECNOLOGÍA</td><td class="tipo">H</td><td class="puntaje">17,45</td></tr>
+					</tbody>
+				</table>
+				<div class="section-header mt-2">🧑‍🏫 F.P.P. (1°, 2°, 3°) 2026</div>
+				<table class="oblea-table">
+					<thead>
+						<tr>
+							<th>Espacio Curricular</th>
+							<th class="tipo">T.</th>
+							<th class="puntaje">Pts.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>DIBUJO TÉCNICO</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>INFORMÁTICA I, II y III</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- COLUMNA 2: CICLO ORIENTADO -->
+			<div class="flex flex-col">
+				<div class="section-header">🎒 Ciclo Orientado (4°,5°,6°)</div>
+				<table class="oblea-table">
+					<thead>
+						<tr>
+							<th>Espacio Curricular</th>
+							<th class="tipo">T.</th>
+							<th class="puntaje">Pts.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>EDI: LENGUAJE MULTIMEDIAL</td><td class="tipo">S</td><td class="puntaje">16,45</td></tr>
+						<tr><td>FÍSICA</td><td class="tipo">S</td><td class="puntaje">16,45</td></tr>
+						<tr><td>MATEMÁTICA</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>MATEMÁTICA APLICADA</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- COLUMNA 3: CARGOS Y C.E.N.S -->
+			<div class="flex flex-col">
+				<div class="section-header">👔 Cargos 2026</div>
+				<table class="oblea-table">
+					<thead>
+						<tr>
+							<th>Cargo</th>
+							<th class="tipo">T.</th>
+							<th class="puntaje">Pts.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>A.C.P.</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>BIBLIOTECARIO (Sin Título)</td><td class="tipo">--</td><td class="puntaje">19,45</td></tr>
+						<tr><td>PRECEPTOR VARONES</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+					</tbody>
+				</table>
+				<div class="section-header mt-2">🏫 C.E.N.S. 2026</div>
+				<table class="oblea-table">
+					<thead>
+						<tr>
+							<th>Espacio</th>
+							<th class="tipo">T.</th>
+							<th class="puntaje">Pts.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>ESTADÍST. Y PROBABILIDADES</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>MATEMÁTICA</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+						<tr><td>MATEMÁTICA FINANCIERA</td><td class="tipo">D</td><td class="puntaje">20,45</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- Footer Reverso -->
+		<div class="mt-1 pt-2 border-t border-slate-100 flex justify-between items-end">
+			<p class="text-[8px] text-slate-400 max-w-[550px] italic leading-tight">
+				* El cargo de <strong>PRECEPTOR</strong> es válido para TODAS las Escuelas de Ex-Nivel Medio y CENS. Información oficial Rama Media.
+			</p>
+			<div class="text-[9px] font-black text-orange-500 uppercase tracking-widest">Oblea 2026</div>
+		</div>
+	</div>
+</body>
+</html>
